@@ -1,27 +1,43 @@
-# Ozon MCP by Sellmonitor
+# Ozon MCP — аналитика Ozon в AI-ассистенте | Sellmonitor
 
-Аналитика Ozon в ChatGPT (Codex), Cursor, VS Code, Claude Code и других AI-ассистентах с поддержкой remote MCP.
+**Ozon MCP от Sellmonitor** подключает аналитику маркетплейса Ozon к ChatGPT (Codex), Cursor, VS Code, Claude Code и другим AI-ассистентам. Исследуйте рынок и конкурентов или анализируйте продажи, расходы и прибыль собственного магазина прямо в чате.
 
 [Русский](#русский) · [English](#english)
+
+**Remote MCP** · **Streamable HTTP** · **OAuth** · **Внешняя и внутренняя аналитика Ozon**
+
+[Получить 3 дня бесплатно](https://sellmonitor.com/?promoCode=MCP) · [Инструкция по внешней аналитике](https://sellmonitor.com/mcp/analytics/instructions) · [Инструкция по внутренней аналитике](https://sellmonitor.com/mcp/inner-analytics/instructions)
 
 ---
 
 ## Русский
 
-### Аналитика Ozon прямо в AI-ассистенте
+### Sellmonitor MCP для Ozon: рынок и ваш магазин
 
-Sellmonitor предоставляет два разных MCP-сервера для работы с Ozon:
+MCP (Model Context Protocol) позволяет AI-ассистенту запрашивать актуальные данные Sellmonitor и использовать их в ответах. Для аналитики Ozon доступны два независимых сервера.
 
-| MCP | Для чего нужен | Техническое имя | URL |
-| --- | --- | --- | --- |
-| **Внешняя аналитика** | Рынок, конкуренты, категории, ниши, бренды, продавцы, товары, поисковые запросы и тренды | `sellmonitor_analytics` | `https://sellmonitor.com/mcp/sellmonitor` |
-| **Внутренняя аналитика** | Ваш магазин: продажи, заказы, возвраты, расходы, остатки, прибыль и финансовые отчёты | `sellmonitor_inner_analytics` | `https://sellmonitor.com/mcp/inner-analytics` |
+#### `sellmonitor_analytics` — внешняя аналитика Ozon
 
-Обычно полезно подключить оба сервера. Внешняя аналитика помогает понять рынок Ozon, а внутренняя — увидеть, что происходит именно в вашем магазине и почему меняется его прибыль.
+Исследует рынок Ozon: конкурентов, категории, ниши, бренды, продавцов, товары, поисковые запросы, цены и тренды.
 
-Оба MCP работают через remote MCP и OAuth. Пароль, идентификатор пользователя и токены Sellmonitor вручную указывать не нужно.
+`https://sellmonitor.com/mcp/sellmonitor`
 
+#### `sellmonitor_inner_analytics` — внутренняя аналитика магазина
+
+Работает с вашими данными на Ozon: продажами, заказами, возвратами, расходами, остатками, прибылью и финансовыми отчётами.
+
+`https://sellmonitor.com/mcp/inner-analytics`
+
+> [!TIP]
+> Подключите оба MCP: внешний объяснит, что происходит на рынке Ozon, а внутренний — что происходит именно в вашем магазине и почему меняется его прибыль.
+
+> [!IMPORTANT]
+> Оба сервера работают через OAuth. Пароль, идентификатор пользователя и токены Sellmonitor вручную указывать не нужно.
+
+> [!NOTE]
 > **Доступ к подписке Sellmonitor бесплатно на 3 дня.** Используйте промокод **`MCP`** — карта не требуется. [Получить доступ](https://sellmonitor.com/?promoCode=MCP).
+
+**Навигация:** [внешняя аналитика](#внешняя-аналитика-ozon) · [внутренняя аналитика](#внутренняя-аналитика-ozon) · [подключение](#быстрое-подключение) · [решение проблем](#если-mcp-не-подключается)
 
 ### Внешняя аналитика Ozon
 
@@ -44,8 +60,6 @@ Sellmonitor предоставляет два разных MCP-сервера д
 - «Проанализируй ценовые сегменты категории и найди сегмент с растущим спросом и умеренной конкуренцией».
 - «Найди продавцов Ozon, которые быстрее рынка растут в этой категории».
 - «Какие поисковые запросы в этой нише имеют высокий спрос, но относительно небольшое число товаров?»
-
-> Распределение товаров и остатков по складам недоступно для Ozon во внешнем MCP. Остальные поддерживаемые инструменты аналитики Ozon продолжают работать.
 
 ### Внутренняя аналитика Ozon
 
@@ -166,20 +180,32 @@ OAuth-вход должен открыться автоматически. Ес�
 
 ## English
 
-### Ozon analytics inside your AI assistant
+### Ozon MCP for market and seller analytics
 
-Sellmonitor provides two separate MCP servers for Ozon:
+Sellmonitor MCP connects current Ozon analytics to ChatGPT (Codex), Cursor, VS Code, Claude Code, and other AI assistants. Model Context Protocol lets the assistant query Sellmonitor data and use it directly in its answers. Two independent servers are available.
 
-| MCP | What it is for | Server name | URL |
-| --- | --- | --- | --- |
-| **Market analytics** | Market research, competitors, categories, niches, brands, sellers, products, search queries, and trends | `sellmonitor_analytics` | `https://sellmonitor.com/mcp/sellmonitor` |
-| **Seller analytics** | Your own store: sales, orders, returns, expenses, inventory, profit, and financial reports | `sellmonitor_inner_analytics` | `https://sellmonitor.com/mcp/inner-analytics` |
+#### `sellmonitor_analytics` — Ozon market analytics
 
-Connecting both servers is usually the best option. Market analytics explains what is happening across Ozon, while seller analytics explains what is happening in your own store and why its profit changes.
+Research the Ozon market: competitors, categories, niches, brands, sellers, products, shopper queries, prices, and trends.
 
-Both servers use remote MCP and OAuth. You do not need to paste your Sellmonitor password, user ID, or access token into an MCP client.
+`https://sellmonitor.com/mcp/sellmonitor`
 
+#### `sellmonitor_inner_analytics` — Ozon seller analytics
+
+Analyze your own Ozon business: sales, orders, returns, expenses, inventory, profit, margin, and financial reports.
+
+`https://sellmonitor.com/mcp/inner-analytics`
+
+> [!TIP]
+> Connect both servers: market analytics explains what is happening across Ozon, while seller analytics explains what is happening in your own store and why its profit changes.
+
+> [!IMPORTANT]
+> Both servers use OAuth. You do not need to paste your Sellmonitor password, user ID, or access token into an MCP client.
+
+> [!NOTE]
 > **Get three days of Sellmonitor access for free.** Use promo code **`MCP`** — no payment card is required. [Get access](https://sellmonitor.com/?promoCode=MCP).
+
+**Navigate:** [market analytics](#ozon-market-analytics) · [seller analytics](#ozon-seller-analytics) · [setup](#quick-setup) · [troubleshooting](#troubleshooting)
 
 ### Ozon market analytics
 
@@ -202,8 +228,6 @@ Example prompts:
 - “Analyze the category's price segments and find one with growing demand and moderate competition.”
 - “Find Ozon sellers that are growing faster than the rest of this category.”
 - “Which shopper queries in this niche have high demand but a relatively low number of competing products?”
-
-> Product and inventory distribution by warehouse is unavailable for Ozon in the market analytics MCP. Other supported Ozon analytics tools remain available.
 
 ### Ozon seller analytics
 
@@ -319,4 +343,3 @@ OAuth should open automatically. If it does not, run `/mcp` in Claude Code and a
 - If the assistant answers without data, explicitly say: “Use Sellmonitor MCP” or “Use Sellmonitor seller analytics MCP.”
 
 Detailed guides: [market analytics](https://sellmonitor.com/mcp/analytics/instructions) · [seller analytics](https://sellmonitor.com/mcp/inner-analytics/instructions)
-
